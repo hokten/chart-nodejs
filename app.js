@@ -76,7 +76,7 @@ function dateArraytoString(dateArray) {
 
 
 app.set('views', __dirname + '/views')
-app.set('view engine', 'jade')
+app.set('view engine', 'ejs')
 app.use(express.logger('dev'))
 app.use(stylus.middleware(
 	{ src: __dirname + '/public'
