@@ -4,7 +4,9 @@
 var async = require('async');
 var express = require('express'), stylus = require('stylus'), nib = require('nib');
 var moment = require('moment');
+
 var app = express();
+
 
 function compile(str, path) {
 	return stylus(str)
@@ -16,6 +18,9 @@ var Db = require('mongodb').Db,
 Connection = require('mongodb').Connection,
 Server = require('mongodb').Server;
 
+function isInt(n) {
+	   return n % 1 === 0;
+}
 
 
 function dateArraytoString(dateArray) {
@@ -244,5 +249,78 @@ app.get('/', function (req, res) {
 		});
 	});
 });
+
+app.get('/profiles', function(req, res){
+	res.redirect('/profiles/1');
+})
+
+app.get('/profiles/', function(req, res){
+	res.redirect('/profiles/1');
+})
+
+app.get('/profiles/:page', function(req, res){
+	var giden = [];
+	var totalpage = 0;
+	var pageitems = 1;
+	var currentpage =0;
+	var datas = {
+		profiles : [],
+		current_page:0,
+		total_page:0,
+		page_items_count:pageitems
+	}
+
+	var currentpage = parseInt(req.params.page);
+	var db = new Db('test', new Server("localhost",27017, {}, {w: 1}), {safe:true});
+	db.open(function(err, db) {
+		db.collection('users', function(err, collection) {
+			collection.distinct('user_id', function (err, result) {
+				console.log("Total records %s",result.length);
+				console.log("Total page %s ",result.length/pageitems);
+				if(isInt(result.length/pageitems)) {
+					totalpage = result.length/pageitems;
+				}
+				else {
+					totalpage = Math.ceil(result.length/pageitems);
+				}
+				if(currentpage > totalpage || currentpage < 1 || !isInt(currentpage) ) {
+					res.render('warnings',{message:"Page not found"});
+				}
+				else {
+					async.eachSeries(result, function (prime, callback) {
+						collection.findOne({'user_id':prime},function(err,result) {
+							
+							var visitor_age = moment().diff(moment(result.birthday),'years');
+							var profiles_details = {
+								name:result.name,
+								total_friend:result.no_of_friends,
+								gender:result.gender,
+								age:visitor_age,
+								date:moment(result.birthday).format("YYYY-MM-DD HH:mm:ss")
+							}
+							datas.profiles.push(profiles_details);
+							callback();
+						});
+
+
+					}, function (err) {
+						if (err) { throw err; }
+						db.close();
+						console.log(datas.profiles);
+						var start = pageitems * (currentpage-1);
+						datas.profiles=datas.profiles.slice(start,start+pageitems);
+						datas.current_page=parseInt(currentpage);
+						datas.total_page=totalpage;
+						console.log(datas);
+						res.render('profiles', {profiles : datas});
+
+					});
+				}
+			});
+		});
+	});
+})
+
+
 
 app.listen(2222)

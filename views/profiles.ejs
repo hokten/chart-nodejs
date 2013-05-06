@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Site</title>
+		<link href="/stylesheets/style.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="/javascripts/jquery.hashchange.min.js"></script>
+		<script src="/javascripts/jquery.easytabs.js"></script>
+		<script src="/javascripts/functions.js"></script>
+		<script>
+			$(document).ready(function() {
+				console.log(<%= profiles %>)
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" style="margin-top:50px">
+				<div class="span2"></div>
+				<div class="span8">
+					<table class="table table-bordered zebra-striped">
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>Customer</th>
+								<th>No Of Friends</th>
+								<th>Gender</th>
+								<th>Age</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% var k = profiles.page_items_count * (profiles.current_page-1)+1 %>
+							<% for(var i=0; i<profiles.profiles.length; i++) { %>
+							<tr>
+								<td style="text-align:center"><%= k %></td>
+								<td><%= profiles.profiles[i].name %></td>
+								<td style="text-align:center"><%= profiles.profiles[i].total_friend %></td>
+								<td style="text-align:center"><img style="width:25px;height:50px" src="/img/<%= profiles.profiles[i].gender %>.jpg"></td>
+								<td style="text-align:center"><%= profiles.profiles[i].age %></td>
+								<td><%= profiles.profiles[i].date %></td>
+							</tr>
+							<% k++ } %>
+						</tbody>
+					</table>
+				</div>
+				<div class="span2"></div>
+			</div>
+			<div class="row">
+				<div class="span12">
+
+					<div class="pagination pagination-centered">
+						<ul>
+							<% if(profiles.current_page == 1) { %>
+							<li class="disabled"><a href="#">&laquo;</a></li>
+							<% } else { %>
+							<li><a href="<%= profiles.current_page-1 %>">&laquo;</a></li>
+							<% } %>
+
+
+
+
+							<% if( profiles.current_page-2 >= 1) { %>
+							<li><a href="<%= profiles.current_page-2 %>"><%= profiles.current_page-2 %></a></li>
+							<% } %>
+							<% if( profiles.current_page-1 >= 1) { %>
+							<li><a href="<%= profiles.current_page-1 %>"><%= profiles.current_page-1 %></a></li>
+							<% } %>
+							<li class="active"><a href="#"><%= profiles.current_page %></a></li>
+							<% if( profiles.current_page+1 <= profiles.total_page) { %>
+							<li><a href="<%= profiles.current_page+1 %>"><%= profiles.current_page+1 %></a></li>
+							<% } %>
+							<% if( profiles.current_page+2 <= profiles.total_page) { %>
+							<li><a href="<%= profiles.current_page+2 %>"><%= profiles.current_page+2 %></a></li>
+							<% } %>
+
+							<% if(profiles.current_page == profiles.total_page) { %>
+							<li class="disabled"><a href="#">&raquo;</a></li>
+							<% } else { %>
+							<li><a href="<%= profiles.current_page+1 %>">&raquo;</a></li>
+							<% } %>
+
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
