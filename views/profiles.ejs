@@ -35,7 +35,7 @@
 							<% for(var i=0; i<profiles.profiles.length; i++) { %>
 							<tr>
 								<td style="text-align:center"><%= k %></td>
-								<td><%= profiles.profiles[i].name %></td>
+								<td><img src="/img/186766_100000642874055_3760391_q.jpg"><%= profiles.profiles[i].name %></td>
 								<td style="text-align:center"><%= profiles.profiles[i].total_friend %></td>
 								<td style="text-align:center"><img style="width:25px;height:50px" src="/img/<%= profiles.profiles[i].gender %>.jpg"></td>
 								<td style="text-align:center"><%= profiles.profiles[i].age %></td>
@@ -52,10 +52,17 @@
 
 					<div class="pagination pagination-centered">
 						<ul>
+
+							<% if(profiles.current_page == 1) { %>
+							<li class="disabled"><a href="#">&laquo;&laquo;</a></li>
+							<% } else { %>
+							<li><a title="First Page" href="1">&laquo;&laquo;</a></li>
+							<% } %>
+
 							<% if(profiles.current_page == 1) { %>
 							<li class="disabled"><a href="#">&laquo;</a></li>
 							<% } else { %>
-							<li><a href="<%= profiles.current_page-1 %>">&laquo;</a></li>
+							<li><a title="Previous Page" href="<%= profiles.current_page-1 %>">&laquo;</a></li>
 							<% } %>
 
 
@@ -78,8 +85,15 @@
 							<% if(profiles.current_page == profiles.total_page) { %>
 							<li class="disabled"><a href="#">&raquo;</a></li>
 							<% } else { %>
-							<li><a href="<%= profiles.current_page+1 %>">&raquo;</a></li>
+							<li><a title="Next Page" href="<%= profiles.current_page+1 %>">&raquo;</a></li>
 							<% } %>
+
+							<% if(profiles.current_page == profiles.total_page) { %>
+							<li class="disabled"><a href="#">&raquo;&raquo;</a></li>
+							<% } else { %>
+							<li><a title="Last Page" href="<%= profiles.total_page %>">&raquo;&raquo;</a></li>
+							<% } %>
+
 
 
 						</ul>

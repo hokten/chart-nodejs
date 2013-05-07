@@ -261,7 +261,7 @@ app.get('/profiles/', function(req, res){
 app.get('/profiles/:page', function(req, res){
 	var giden = [];
 	var totalpage = 0;
-	var pageitems = 1;
+	var pageitems = 5;
 	var currentpage =0;
 	var datas = {
 		profiles : [],
