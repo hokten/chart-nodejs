@@ -103,7 +103,7 @@ app.get('/logget', function(req, res){
 		{
 			for(var i=0; i<dates.length; i++){
 				(function(s){
-					var db = new Db('test', new Server("localhost",27017, {}, {w: 1}), {safe:true});
+					var db = new Db('test', new Server("ec2-50-16-55-172.compute-1.amazonaws.com",27017, {}, {w: 1}), {safe:true});
 					db.open(function(err, db) {
 						db.collection('events', function(err, collection) {
 							collection.find({'event_start': {$gte:moment(dates[s],'DD-MM-YYYY').toDate(),$lt:moment(dates[s],'DD-MM-YYYY').add('days',1).toDate()	}},function(err, cursor){
@@ -132,7 +132,7 @@ app.get('/logget', function(req, res){
 					function(callback)
 					{
 						// Selecting all records from "events" collection where  beetween start date and end date
-						var db = new Db('test', new Server("localhost",27017, {}, {w: 1}), {safe:true});
+						var db = new Db('test', new Server("ec2-50-16-55-172.compute-1.amazonaws.com",27017, {}, {w: 1}), {safe:true});
 					   	db.open(function(err, db) {
 							db.collection('events', function(err, collection) {
 								collection.find({'event_start': {
@@ -151,7 +151,7 @@ app.get('/logget', function(req, res){
 						for(var m=0; m<arg1.length; m++)
 						{
 							(function(t) {
-								var db = new Db('test', new Server("localhost",27017, {}, {w: 1}), {safe:true});
+								var db = new Db('test', new Server("ec2-50-16-55-172.compute-1.amazonaws.com",27017, {}, {w: 1}), {safe:true});
 								db.open(function(err, db) {
 									db.collection('users', function(err, collection) {
 										collection.find({'event_id': arg1[t].event_id}).toArray(function (err, result) {
@@ -211,7 +211,7 @@ app.get('/', function (req, res) {
 	var rows=[];
 
 
-	var db = new Db('test', new Server("localhost",27017, {}, {w: 1}), {safe:true});
+	var db = new Db('test', new Server("ec2-50-16-55-172.compute-1.amazonaws.com",27017, {}, {w: 1}), {safe:true});
 	db.open(function(err, db) {
 		db.collection('events', function(err, collection) {
 			collection.find({},{'sort':'event_start'}).toArray(function (err, result) {
@@ -271,7 +271,7 @@ app.get('/profiles/:page', function(req, res){
 	}
 
 	var currentpage = parseInt(req.params.page);
-	var db = new Db('test', new Server("localhost",27017, {}, {w: 1}), {safe:true});
+	var db = new Db('test', new Server("ec2-50-16-55-172.compute-1.amazonaws.com",27017, {}, {w: 1}), {safe:true});
 	db.open(function(err, db) {
 		db.collection('users', function(err, collection) {
 			collection.distinct('user_id', function (err, result) {
