@@ -1,0 +1,221 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'redis' ]
+2 info using npm@1.2.15
+3 info using node@v0.10.1
+4 verbose read json /home/ec2-user/chart-nodejs/package.json
+5 warn package.json MySite@0.0.1 No README.md file found!
+6 verbose read json /home/ec2-user/chart-nodejs/node_modules/async/package.json
+7 verbose read json /home/ec2-user/chart-nodejs/node_modules/ejs/package.json
+8 verbose read json /home/ec2-user/chart-nodejs/node_modules/express/package.json
+9 verbose read json /home/ec2-user/chart-nodejs/node_modules/express-slash/package.json
+10 verbose read json /home/ec2-user/chart-nodejs/node_modules/jade/package.json
+11 verbose read json /home/ec2-user/chart-nodejs/node_modules/moment/package.json
+12 verbose read json /home/ec2-user/chart-nodejs/node_modules/mongodb/package.json
+13 verbose read json /home/ec2-user/chart-nodejs/node_modules/nib/package.json
+14 verbose read json /home/ec2-user/chart-nodejs/node_modules/smog/package.json
+15 verbose read json /home/ec2-user/chart-nodejs/node_modules/stylus/package.json
+16 verbose from cache /home/ec2-user/chart-nodejs/package.json
+17 verbose readDependencies using package.json deps
+18 verbose cache add [ 'redis', null ]
+19 verbose cache add name=undefined spec="redis" args=["redis",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'redis',
+20 verbose parsed url   path: 'redis',
+20 verbose parsed url   href: 'redis' }
+21 silly lockFile b840fc02-redis redis
+22 verbose lock redis /home/ec2-user/.npm/b840fc02-redis.lock
+23 silly lockFile b840fc02-redis redis
+24 silly lockFile b840fc02-redis redis
+25 verbose addNamed [ 'redis', '' ]
+26 verbose addNamed [ null, '' ]
+27 silly lockFile fb3bbc27-redis redis@
+28 verbose lock redis@ /home/ec2-user/.npm/fb3bbc27-redis.lock
+29 silly addNameRange { name: 'redis', range: '', hasData: false }
+30 verbose url raw redis
+31 verbose url resolving [ 'https://registry.npmjs.org/', './redis' ]
+32 verbose url resolved https://registry.npmjs.org/redis
+33 info trying registry request attempt 1 at 15:29:31
+34 verbose etag "75DB1CE8Q642L8Q0TNFMQP61R"
+35 http GET https://registry.npmjs.org/redis
+36 http 304 https://registry.npmjs.org/redis
+37 silly registry.get cb [ 304,
+37 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+37 silly registry.get     etag: '"75DB1CE8Q642L8Q0TNFMQP61R"',
+37 silly registry.get     date: 'Wed, 15 May 2013 15:29:31 GMT',
+37 silly registry.get     'content-length': '0' } ]
+38 verbose etag redis from cache
+39 silly addNameRange number 2 { name: 'redis', range: '', hasData: true }
+40 silly addNameRange versions [ 'redis',
+40 silly addNameRange   [ '0.0.1',
+40 silly addNameRange     '0.0.2',
+40 silly addNameRange     '0.0.3',
+40 silly addNameRange     '0.0.4',
+40 silly addNameRange     '0.0.7',
+40 silly addNameRange     '0.0.8',
+40 silly addNameRange     '0.1.0',
+40 silly addNameRange     '0.1.1',
+40 silly addNameRange     '0.1.2',
+40 silly addNameRange     '0.2.0',
+40 silly addNameRange     '0.2.1',
+40 silly addNameRange     '0.2.2',
+40 silly addNameRange     '0.2.3',
+40 silly addNameRange     '0.2.4',
+40 silly addNameRange     '0.2.6',
+40 silly addNameRange     '0.3.0',
+40 silly addNameRange     '0.3.1',
+40 silly addNameRange     '0.3.2',
+40 silly addNameRange     '0.3.3',
+40 silly addNameRange     '0.3.4',
+40 silly addNameRange     '0.3.5',
+40 silly addNameRange     '0.3.6',
+40 silly addNameRange     '0.3.7',
+40 silly addNameRange     '0.3.9',
+40 silly addNameRange     '0.4.0',
+40 silly addNameRange     '0.4.1',
+40 silly addNameRange     '0.4.2',
+40 silly addNameRange     '0.5.0',
+40 silly addNameRange     '0.5.1',
+40 silly addNameRange     '0.5.2',
+40 silly addNameRange     '0.5.3',
+40 silly addNameRange     '0.5.4',
+40 silly addNameRange     '0.5.5',
+40 silly addNameRange     '0.5.6',
+40 silly addNameRange     '0.5.7',
+40 silly addNameRange     '0.5.8',
+40 silly addNameRange     '0.5.9',
+40 silly addNameRange     '0.5.10',
+40 silly addNameRange     '0.5.11',
+40 silly addNameRange     '0.6.0',
+40 silly addNameRange     '0.6.1',
+40 silly addNameRange     '0.6.2',
+40 silly addNameRange     '0.6.3',
+40 silly addNameRange     '0.6.4',
+40 silly addNameRange     '0.6.5',
+40 silly addNameRange     '0.6.6',
+40 silly addNameRange     '0.6.7',
+40 silly addNameRange     '0.7.0',
+40 silly addNameRange     '0.7.1',
+40 silly addNameRange     '0.7.2',
+40 silly addNameRange     '0.7.3',
+40 silly addNameRange     '0.8.0',
+40 silly addNameRange     '0.8.1',
+40 silly addNameRange     '0.8.2',
+40 silly addNameRange     '0.8.3' ] ]
+41 verbose addNamed [ 'redis', '0.8.3' ]
+42 verbose addNamed [ '0.8.3', '0.8.3' ]
+43 silly lockFile 3ea236b3-redis-0-8-3 redis@0.8.3
+44 verbose lock redis@0.8.3 /home/ec2-user/.npm/3ea236b3-redis-0-8-3.lock
+45 verbose read json /home/ec2-user/.npm/redis/0.8.3/package/package.json
+46 silly lockFile c839c2ed--npmjs-org-redis-redis-0-8-3-tgz https://registry.npmjs.org/redis/-/redis-0.8.3.tgz
+47 verbose lock https://registry.npmjs.org/redis/-/redis-0.8.3.tgz /home/ec2-user/.npm/c839c2ed--npmjs-org-redis-redis-0-8-3-tgz.lock
+48 verbose addRemoteTarball [ 'https://registry.npmjs.org/redis/-/redis-0.8.3.tgz',
+48 verbose addRemoteTarball   '4d0c8ba8294afa6acbc71c4b6fbde7a3982d4f8b' ]
+49 info retry fetch attempt 1 at 15:29:31
+50 verbose fetch to= /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/tmp.tgz
+51 http GET https://registry.npmjs.org/redis/-/redis-0.8.3.tgz
+52 http 200 https://registry.npmjs.org/redis/-/redis-0.8.3.tgz
+53 silly shasum updated bytes 54354
+54 info shasum 4d0c8ba8294afa6acbc71c4b6fbde7a3982d4f8b
+54 info shasum /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/tmp.tgz
+55 verbose tar unpack /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/tmp.tgz
+56 silly lockFile 704a0294-1900-0-43934745667502284-package /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package
+57 verbose lock /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package /home/ec2-user/.npm/704a0294-1900-0-43934745667502284-package.lock
+58 silly lockFile 44542a71-1900-0-43934745667502284-tmp-tgz /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/tmp.tgz
+59 verbose lock /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/tmp.tgz /home/ec2-user/.npm/44542a71-1900-0-43934745667502284-tmp-tgz.lock
+60 silly gunzTarPerm modes [ '755', '644' ]
+61 silly gunzTarPerm extractEntry package.json
+62 silly gunzTarPerm extractEntry .npmignore
+63 silly gunzTarPerm extractEntry README.md
+64 silly gunzTarPerm extractEntry diff_multi_bench_output.js
+65 silly gunzTarPerm extractEntry test.js
+66 silly gunzTarPerm extractEntry multi_bench.js
+67 silly gunzTarPerm extractEntry generate_commands.js
+68 silly gunzTarPerm extractEntry index.js
+69 silly gunzTarPerm extractEntry changelog.md
+70 silly gunzTarPerm extractEntry examples/pub_sub.js
+71 silly gunzTarPerm extractEntry examples/unix_socket.js
+72 silly gunzTarPerm extractEntry examples/file.js
+73 silly gunzTarPerm extractEntry examples/extend.js
+74 silly gunzTarPerm extractEntry examples/psubscribe.js
+75 silly gunzTarPerm extractEntry examples/mget.js
+76 silly gunzTarPerm extractEntry examples/monitor.js
+77 silly gunzTarPerm extractEntry examples/sort.js
+78 silly gunzTarPerm extractEntry examples/multi.js
+79 silly gunzTarPerm extractEntry examples/auth.js
+80 silly gunzTarPerm extractEntry examples/simple.js
+81 silly gunzTarPerm extractEntry examples/eval.js
+82 silly gunzTarPerm extractEntry examples/backpressure_drain.js
+83 silly gunzTarPerm extractEntry examples/web_server.js
+84 silly gunzTarPerm extractEntry examples/subqueries.js
+85 silly gunzTarPerm extractEntry examples/subquery.js
+86 silly gunzTarPerm extractEntry examples/multi2.js
+87 silly gunzTarPerm extractEntry benches/reconnect_test.js
+88 silly gunzTarPerm extractEntry benches/hiredis_parser.js
+89 silly gunzTarPerm extractEntry benches/re_sub_test.js
+90 silly gunzTarPerm extractEntry benches/buffer_bench.js
+91 silly gunzTarPerm extractEntry benches/sub_quit_test.js
+92 silly gunzTarPerm extractEntry benches/stress/codec.js
+93 silly gunzTarPerm extractEntry benches/stress/pubsub/server.js
+94 silly gunzTarPerm extractEntry benches/stress/pubsub/pub.js
+95 silly gunzTarPerm extractEntry benches/stress/pubsub/run
+96 silly gunzTarPerm extractEntry benches/stress/speed/speed.js
+97 silly gunzTarPerm extractEntry benches/stress/speed/plot
+98 silly gunzTarPerm extractEntry benches/stress/speed/size-rate.png
+99 silly gunzTarPerm extractEntry benches/stress/speed/00
+100 silly gunzTarPerm extractEntry benches/stress/rpushblpop/server.js
+101 silly gunzTarPerm extractEntry benches/stress/rpushblpop/pub.js
+102 silly gunzTarPerm extractEntry benches/stress/rpushblpop/run
+103 silly gunzTarPerm extractEntry lib/commands.js
+104 silly gunzTarPerm extractEntry lib/to_array.js
+105 silly gunzTarPerm extractEntry lib/util.js
+106 silly gunzTarPerm extractEntry lib/queue.js
+107 silly gunzTarPerm extractEntry lib/parser/javascript.js
+108 silly gunzTarPerm extractEntry lib/parser/hiredis.js
+109 verbose read json /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package/package.json
+110 silly lockFile 704a0294-1900-0-43934745667502284-package /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package
+111 silly lockFile 704a0294-1900-0-43934745667502284-package /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package
+112 silly lockFile 44542a71-1900-0-43934745667502284-tmp-tgz /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/tmp.tgz
+113 silly lockFile 44542a71-1900-0-43934745667502284-tmp-tgz /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/tmp.tgz
+114 verbose from cache /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package/package.json
+115 verbose tar pack [ '/home/ec2-user/.npm/redis/0.8.3/package.tgz',
+115 verbose tar pack   '/home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package' ]
+116 verbose tarball /home/ec2-user/.npm/redis/0.8.3/package.tgz
+117 verbose folder /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package
+118 silly lockFile 704a0294-1900-0-43934745667502284-package /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package
+119 verbose lock /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package /home/ec2-user/.npm/704a0294-1900-0-43934745667502284-package.lock
+120 silly lockFile 199bc0b2-user-npm-redis-0-8-3-package-tgz /home/ec2-user/.npm/redis/0.8.3/package.tgz
+121 verbose lock /home/ec2-user/.npm/redis/0.8.3/package.tgz /home/ec2-user/.npm/199bc0b2-user-npm-redis-0-8-3-package-tgz.lock
+122 silly lockFile 704a0294-1900-0-43934745667502284-package /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package
+123 silly lockFile 704a0294-1900-0-43934745667502284-package /home/ec2-user/tmp/npm-2862/1368631771900-0.43934745667502284/package
+124 silly lockFile 199bc0b2-user-npm-redis-0-8-3-package-tgz /home/ec2-user/.npm/redis/0.8.3/package.tgz
+125 silly lockFile 199bc0b2-user-npm-redis-0-8-3-package-tgz /home/ec2-user/.npm/redis/0.8.3/package.tgz
+126 silly lockFile c839c2ed--npmjs-org-redis-redis-0-8-3-tgz https://registry.npmjs.org/redis/-/redis-0.8.3.tgz
+127 silly lockFile c839c2ed--npmjs-org-redis-redis-0-8-3-tgz https://registry.npmjs.org/redis/-/redis-0.8.3.tgz
+128 silly lockFile 3ea236b3-redis-0-8-3 redis@0.8.3
+129 silly lockFile 3ea236b3-redis-0-8-3 redis@0.8.3
+130 silly lockFile fb3bbc27-redis redis@
+131 silly lockFile fb3bbc27-redis redis@
+132 error Error: EPERM, chown '/home/ec2-user/.npm/redis/0.8.3/package.tgz'
+132 error  { [Error: EPERM, chown '/home/ec2-user/.npm/redis/0.8.3/package.tgz']
+132 error   errno: 50,
+132 error   code: 'EPERM',
+132 error   path: '/home/ec2-user/.npm/redis/0.8.3/package.tgz' }
+133 error Please try running this command again as root/Administrator.
+134 error System Linux 3.5.7-gentoo
+135 error command "/usr/bin/node" "/usr/bin/npm" "install" "redis"
+136 error cwd /home/ec2-user/chart-nodejs
+137 error node -v v0.10.1
+138 error npm -v 1.2.15
+139 error path /home/ec2-user/.npm/redis/0.8.3/package.tgz
+140 error code EPERM
+141 error errno 50
+142 error stack Error: EPERM, chown '/home/ec2-user/.npm/redis/0.8.3/package.tgz'
+143 verbose exit [ 50, true ]

@@ -203,7 +203,7 @@ app.get('/logget', function(req, res){
 
 
 // Route firstly open page. 
-app.get('/', function (req, res) {
+app.get('/statistics', function (req, res) {
 	var dates=[];
 	var test=true;
 	var s=0;
@@ -244,7 +244,7 @@ app.get('/', function (req, res) {
 					week=[];
 				}
 				db.close();
-				res.render('index', {title : dateArraytoString(dates)});
+				res.render('statistics', {title : dateArraytoString(dates)});
 			});
 		});
 	});

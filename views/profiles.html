@@ -8,8 +8,6 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="/javascripts/jquery.hashchange.min.js"></script>
 		<script src="/javascripts/jquery.easytabs.js"></script>
-		<script src="/javascripts/moment.min.js"></script>
-
 		<script src="/javascripts/functions.js"></script>
 		<script>
 			$(document).ready(function() {
@@ -20,13 +18,12 @@
 	<body>
 		<!-- Part 1: Wrap all page content here -->
 		<div id="wrap">
-			<div id="header-container">
+			<div style="background-color:#fafafa;height:120px;width:100%;border-bottom:1px solid #dddddd">
 				<!-- Fixed navbar -->
 				<div class="navbar">
 					<div class="navbar-inner">
 						<div class="container">
-							<div style="float:right;height:40px;"><a style="line-height:40px" href="#">Current Time : <script type="text/javascript">document.write(moment().format("YYYY-MM-DD HH:mm:ss"));</script></a></div>
-
+							<div style="float:right"><a class="brand" href="#">Project name</a></div>
 							<div class="nav-collapse collapse">
 								<ul class="nav" style="float:right">
 									<li class="active"><a href="#">Home</a></li>
@@ -39,39 +36,21 @@
 					</div>
 				</div>
 				<!-- Start of Service Name -->
-				<div id="service-title">
-					TouchLike
+				<div style="width:100%;text-align:center;border-bottom:1px solid #dddddd">
+					dasdasd
 				</div>
 				<!-- End Of Service Name -->
-	<div class="row">
-					<div class="span9 offset3">
-				<div id="nav-menu" style="height:30px;margin-top:3px;">
-					<ul>
-						<li><a class="activelink" href="http://ec2-50-16-55-172.compute-1.amazonaws.com:2222/profiles">Profiles</a></li>
-						<li><a href="http://ec2-50-16-55-172.compute-1.amazonaws.com:2222/statistics">Statistics</a></li>
-					</ul>
-				</div>
 			</div>
-			</div>
-
-			</div>
-				<div class="row" style="background-color:#feffee">
-					<div class="span4 offset3">Event</div>
-					<div class="span4">Very Fun Event</div>
-				</div>
-				<div class="row" style="background-color:#feffee">
-					<div class="span4 offset3">Event Period</div>
-					<div class="span4"><select id="dates" name="dates"></select></div>
-				</div>
-				<div class="row" style="background-color:#feffee;border-bottom:1px inset #e6e6e6">
-					<div class="span4 offset3">Stat</div>
-					<div class="span4">257</div>
-				</div>
-
-
 			<!-- Begin page content -->
 			<div class="container">
-							<!-- Content Start -->
+				<!-- Start of Main Menus -->
+				<div id="nav-menu" style="height:30px;margin-right:0px; margin-top: -34px;">
+					<ul>
+						<li><a href="#">Profiles</a></li>
+						<li><a href="#">Statistics</a></li>
+					</ul>
+				</div>
+				<!-- Content Start -->
 
 
 				<!-- On ce kii Bas -->
@@ -170,10 +149,9 @@
 			<div id="push"></div>
 		</div>
 		<div id="footer">
-			<div class="container" style="text-align:center">
-				<a href="#">About Us </a> &nbsp; &nbsp; <a href="#">Contact Us</a>.</p>
-				<p class="muted credit">Copyright (c) 2013 DataTriple - All Rights Reserved</p>
-
+			<div class="container">
+				<p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan 
+					Fait</a>.</p>
 			</div>
 		</div>
 	</body>
